@@ -62,6 +62,9 @@ The dataset used is "public_art_artists.csv," sourced from Vancouver's Open Data
 
 **Exploratory Data Analysis:** AWS Glue DataBrew and Amazon Athena were used to understand trends, missing values, and outliers.
 
+![image](https://github.com/user-attachments/assets/961deca4-0cc7-473e-99bf-71defbddb875)
+
+
 **Data Cleaning:** To ensure accuracy in further analysis, data cleaning was performed using AWS Glue DataBrew:
 
 • Missing Values Handling: Missing artist names were flagged for further investigation. Null values in installation years were replaced with the most frequent year in that particular region.
@@ -176,7 +179,6 @@ The cleaned dataset is stored in a transformation bucket (publicart-trf-bipro).
 
 • Around 75% of artworks remain active, while 25% have been removed or relocated, raising concerns about long-term maintenance and conservation.
 
-
 **Recommendations:** Based on the analysis, the following recommendations are proposed:
 
 • Promote Art in Underserved Areas: Public art projects should be extended to less-represented neighborhoods to ensure cultural inclusivity.
@@ -247,23 +249,23 @@ Same as above
 
 The dataset was extracted from the Vancouver Open Data Portal and uploaded to an Amazon S3 bucket (publicart-raw-bipro) for centralized and secure storage.
 
-✔️ Data Security: AWS KMS encryption and S3 bucket versioning were enabled to maintain data integrity.
+Data Security: AWS KMS encryption and S3 bucket versioning were enabled to maintain data integrity.
 
-✔️ Access Control: IAM policies restricted unauthorized access to the dataset.
+• Access Control: IAM policies restricted unauthorized access to the dataset.
 
-✔️ Data Backup: Raw datasets were preserved before transformation.
+• Data Backup: Raw datasets were preserved before transformation.
 
 **2. Data Assessment**
 
 Using AWS Glue DataBrew, an initial assessment of the dataset was performed to identify quality issues:
 
-✔️ Missing Values: Artist Name (4%), Year Installed (7%), and type (5%) contained null values.
+• Missing Values: Artist Name (4%), Year Installed (7%), and type (5%) contained null values.
 
-✔️ Duplicate Records: 3% of the dataset had duplicate records for artworks.
+• Duplicate Records: 3% of the dataset had duplicate records for artworks.
 
-✔️ Inconsistent Formatting: Variations in capitalization and abbreviations in Artist Name and Location.
+• Inconsistent Formatting: Variations in capitalization and abbreviations in Artist Name and Location.
 
-✔️ Statistical Summaries:
+• Statistical Summaries:
 
 • The earliest recorded installation was 1950, while the most recent was 2023.
 
@@ -273,51 +275,96 @@ Using AWS Glue DataBrew, an initial assessment of the dataset was performed to i
 
 Handling Missing Values
 
-✔️ Missing Artist Names were flagged for manual review.
+• Missing Artist Names were flagged for manual review.
 
-✔️ Missing Year Installed values were replaced with the mode year for that location.
+• Missing Year Installed values were replaced with the mode year for that location.
 
-✔️ Missing artwork name values were assigned based on similar artworks by the same artist.
+• Missing artwork name values were assigned based on similar artworks by the same artist.
 
 Duplicate Removal
 
-✔️ Duplicates were identified based on a combination of Title, Artist Name, and Location and removed using AWS Glue transformations.
+• Duplicates were identified based on a combination of Title, Artist Name, and Location and removed using AWS Glue transformations.
 
 Standardizing Data Formats
 
-✔️ Converted Year Installed to integer format.
+• Converted Year Installed to integer format.
 
-✔️ Standardized text fields to ensure consistent casing (e.g., Joe David instead of john david).
+• Standardized text fields to ensure consistent casing (e.g., Joe David instead of john david).
 
-✔️ Normalized Medium values (e.g., merging bronze and Bronze into Bronze).
+• Normalized Medium values (e.g., merging bronze and Bronze into Bronze).
 
 
 **Tools and Technologies**
 
+Amazon S3: Data storage
+
+AWS Glue DataBrew: Data profiling and cleaning
+
+AWS Glue ETL: Data transformation and automated pipeline
+
+AWS IAM: Secure access management
+
+AWS CloudWatch: Monitoring of data processing activities
+
+AWS CloudTrail: Security and auditing of data operations
 
 **Deliverables**
 
-Timeline
+A thoroughly cleaned and structured dataset, stored securely for ongoing analysis.
 
-Data Quality Control of Vancouver City Public Art
+Detailed documentation outlining the data-wrangling processes and transformations.
 
-Project Description
+Monitoring dashboards for real-time data quality tracking.
 
-Project Title
+Training materials and best practice guidelines for continued dataset maintenance.
 
-Objective
+**Timeline**
 
-Background
+Week 1: Data ingestion and initial storage configuration on Amazon S3.
 
-Scope
+Week 2: Data profiling and assessment using AWS Glue DataBrew.
 
-Methodology
+Week 3: Data cleaning (duplicate removal, column separation, and standardization).
 
-Deliverables
+Week 4: Data transformation and consolidation into structured datasets.
 
-Timeline
+Week 5: Monitoring and security implementation using AWS IAM, CloudWatch, and CloudTrail.
 
-Descriptive Analysis of Scholarly Activities for Faculties Policy at UCW
+Week 6: Final documentation, dashboard creation, and stakeholder training.
+
+<img width="468" alt="image" src="https://github.com/user-attachments/assets/531277e0-751f-4429-99ef-17f9863f4560" />
+
+<img width="468" alt="image" src="https://github.com/user-attachments/assets/1730b72f-8ff5-43fb-bd5d-914bde40780a" />
+
+**Data Quality Control of Vancouver City Public Art**
+
+**Project Description**
+
+The objective of this analysis is to systematically study and summarize the Scholarly Activity Procedure (Procedure 5003p) at University Canada West (UCW). This project utilizes AWS cloud services to enhance understanding, management, and compliance with procedural standards. It identifies critical procedures, responsibilities, and funding mechanisms provided for faculty scholarly activities.
+
+**Project Title**
+
+Analyzing Scholarly Activity Procedure at UCW Using AWS
+
+**Objective**
+
+Summarize key components and procedural requirements.
+
+Structure data effectively for enhanced accessibility and management.
+
+Provide insightful visualizations and analyses to support procedural compliance and administrative efficiency.
+
+**Background**
+
+**Scope**
+
+**Methodology**
+
+**Deliverables**
+
+**Timeline**
+
+**Descriptive Analysis of Scholarly Activities for Faculties Policy at UCW**
 
 Project Description
 
