@@ -293,7 +293,6 @@ Standardizing Data Formats
 
 • Normalized Medium values (e.g., merging bronze and Bronze into Bronze).
 
-
 **Tools and Technologies**
 
 Amazon S3: Data storage
@@ -366,21 +365,69 @@ Provide insightful visualizations and analyses to support procedural compliance 
 
 **Descriptive Analysis of Scholarly Activities for Faculties Policy at UCW**
 
-Project Description
+**Project Description**
 
-Project Title
+The objective of this project was to systematically analyze the Scholarly Activity Procedure (Procedure 5003p) at University Canada West (UCW). Data was extracted from ChatGPT, formatted into CSV files (Application-List.csv, Faculty-List.csv, Funding-List.csv), and then uploaded to an Amazon S3 bucket under "Scholarly Activities for Faculties". AWS services facilitated the profiling, cleaning, and structured analysis of this data to support administrative oversight, compliance, and optimization.
 
-Objective
+**Project Title**
 
-Dataset
+Descriptive Analysis of Academics policy - UCW Scholarly Activity for Faculties Procedure
 
-Methodology
+**Objective**
 
-Tools and Technologies
+Extract detailed procedural data using ChatGPT.
 
-Deliverables
+Utilize AWS services for structured data management.
 
-Data Wrangling for Scholarly Activities for Faculties Policy at UCW
+Perform comprehensive analysis to aid compliance and administrative decision-making.
+
+**Dataset**
+
+Data extracted via ChatGPT included three main datasets:
+
+Application List (Application-List.csv): Application details and statuses.
+
+Faculty List (Faculty-List.csv): Faculty information and eligibility criteria.
+
+Funding List (Funding-List.csv): Types and details of available funds.
+
+<img width="468" alt="image" src="https://github.com/user-attachments/assets/a279c2da-95f1-4ad6-a446-3701ec2e8449" />
+
+
+**Methodology**
+
+**Data Collection and Preparation**:
+
+Extracted procedural data using ChatGPT and structured it into CSV files.
+
+Uploaded CSV files to Amazon S3 bucket named "academics-raw-biprojit/scholarlyactivityforfaculty/"
+
+**Data Cleaning and Data Profiling:** Performed profiling using AWS Glue DataBrew for assessing dataset quality. Conducted data cleaning, including removal of duplicates, handling missing data, and standardization.
+
+**Descriptive Statistics:** Generated key statistics with AWS Glue DataBrew, summarizing applications, faculty eligibility, and funding information.
+
+**Data Exploration and Analysis:** Used Amazon Athena to execute SQL queries for deeper analysis. Created visual dashboards for insightful representation of scholarly activity processes.
+
+**Tools and Technologies**
+
+Amazon S3: Centralized data storage
+
+AWS Glue DataBrew: Data cleaning and profiling
+
+Amazon Athena: Detailed querying and analysis
+
+<img width="382" alt="image" src="https://github.com/user-attachments/assets/999ffe29-6390-4de4-af9e-fd50c977ce42" />
+
+
+**Deliverables**
+
+Analytical report providing comprehensive insights into UCW’s Scholarly Activity Procedure.
+
+AWS-powered interactive dashboards.
+
+Strategic recommendations for improved compliance and management.
+
+**Data Wrangling for Scholarly Activities for Faculties Policy at UCW**
 
 Project Description
 
